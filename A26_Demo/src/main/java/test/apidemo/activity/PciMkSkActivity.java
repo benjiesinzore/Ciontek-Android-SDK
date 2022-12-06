@@ -17,6 +17,7 @@ import vpos.apipackage.ByteUtil;
 import vpos.apipackage.PosApiHelper;
 import vpos.apipackage.StringUtil;
 
+
 /**
  * Created by Administrator on 2017/8/17.
  */
