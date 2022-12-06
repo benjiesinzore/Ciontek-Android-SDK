@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/result"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_msg"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <Button
+            android:id="@+id/btnMcuOn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:text="MCU ON"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"
+            android:onClick="OnClickMcuOn"
+            />
+        <Button
+            android:id="@+id/btnMcuOff"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="MCU OFF"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"
+
+            android:onClick="OnClickMcuOff"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_button"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editSn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:hint=" input sn ... "
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/shape_msg"/>
+        <Button
+            android:id="@+id/btnSetSN"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="SetSN"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnGetSN"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:text="GetSN"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+        <Button
+            android:id="@+id/btnGetChipID"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="GetChipID"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnBeep"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:text="Beep"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+
+        <Button
+            android:id="@+id/btnGps"
+            android:onClick="OnClickGps"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:text="Gps"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btnVersion"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Version"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLED1Open"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickLED1Open"
+            android:text="LED1 OPEN"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button" />
+
+        <Button
+            android:id="@+id/btnLED2Open"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickLED2Open"
+            android:text="LED2 OPEN"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+
+        <Button
+            android:id="@+id/btnLED3Open"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickLED3Open"
+            android:text="LED3 OPEN"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+
+        <Button
+            android:id="@+id/btnLED4Open"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickLED4Open"
+            android:text="LED4 OPEN"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLED1Close"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickLED1Close"
+            android:text="LED1 Close"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button" />
+
+        <Button
+            android:id="@+id/btnLED2Close"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickLED2Close"
+            android:text="LED2 Close"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+
+        <Button
+            android:id="@+id/btnLED3Close"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickLED3Close"
+            android:text="LED3 Close"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+
+        <Button
+            android:id="@+id/btnLED4Close"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickLED4Close"
+            android:text="LED4 Close"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/btnGetOsVer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickOsVer"
+            android:text="OS Version"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button" />
+
+        <Button
+            android:id="@+id/btnMcuVer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:onClick="OnClickMcuVer"
+            android:text="Mcu Version"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

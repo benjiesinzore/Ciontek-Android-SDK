@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/result"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView_pci"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_msg"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"/>
+
+    <Spinner
+        android:id="@+id/spinner_key_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_mkey"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:onClick="OnClickMkey"
+            android:text="Write_MKey"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"
+            />
+
+        <Button
+            android:id="@+id/Button_pin"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:onClick="OnClick_WorkKey"
+            android:text="Write_SKey"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Button_rnd"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:onClick="OnClickGetKcv"
+            android:text="GetKcv"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"
+
+            />
+
+        <Button
+            android:id="@+id/Button_des"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:onClick="OnClickGetDes"
+            android:text="GetDes"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Button_mac"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:onClick="OnClickGetMac"
+            android:text="GetMac"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_button"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
