@@ -225,8 +225,8 @@ public class MainActivity extends Activity {
                         break;
                     case ITEM_CODE_PRINT:
                         Toast.makeText(MainActivity.this, "hello benjamin", Toast.LENGTH_SHORT).show();
-                        Intent printIntent = new Intent(MainActivity.this, PrintActivity.class);
-                        startActivity(printIntent);
+//                        Intent printIntent = new Intent(MainActivity.this, PrintActivity.class);
+//                        startActivity(printIntent);
                         break;
                     case ITEM_CODE_SYS:
                         Intent sysIntent = new Intent(MainActivity.this, SysActivity.class);
@@ -285,46 +285,14 @@ public class MainActivity extends Activity {
                         String deviceId = ((TelephonyManager) MainActivity.this.getSystemService(TELEPHONY_SERVICE)).getDeviceId();
                         Log.e("liuhao", "-------> IMEI:" + deviceId);
                         Toast.makeText(MainActivity.this,deviceId,Toast.LENGTH_SHORT).show();
-                        /*
-                        String path = getStoragePath(getApplicationContext(), true) + "/write.txt";
-                        try {
-                            File file = new File(path);
-                            //file.createNewFile();
-                            Log.e("liuhao write",file.getAbsolutePath());
 
-                            FileOutputStream fos=new FileOutputStream(file);
-                            fos.write("abcdefghijklmn".getBytes());
-                            fos.close();
-
-                            Log.e("liuhao write","end");
-
-                        } catch (IOException e) {
-                            Log.e("liuhao write",e.getMessage());
-                            e.printStackTrace();
-                        }
-                        */
-                        break;
                 }
             }
         });
     }
 
-//    public static final String getIMEI(Context context) {
-//        try {
-//            //实例化TelephonyManager对象
-//            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-//            //获取IMEI号
-//            String imei = telephonyManager.getDeviceId();
-//            //在次做个验证，也不是什么时候都能获取到的啊
-//            if (imei == null) {
-//                imei = "";
-//            }
-//            return imei;
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return "";
-//        }
-//    }
+
+
 
     /**
      * @param mContext
