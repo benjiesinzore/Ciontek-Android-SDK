@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 
@@ -433,30 +434,7 @@ public class PrintActivity extends Activity {
 
                 posApiHelper.PrintSetGray(ret);
                 Log.e(tag, "PrintSetGray():" );
-//                posApiHelper.PrintSetVoltage(BatteryV * 2 / 100);
-/*
-                ret = posApiHelper.PrintCheckStatus();
-                Log.e(tag, "PrintCheckStatus():" );
-                if (ret == -1) {
-                    RESULT_CODE = -1;
-                    Log.e(tag, "Lib_PrnCheckStatus fail, ret = " + ret);
-                    SendMsg("Error, No Paper ");
-                    m_bThreadFinished = true;
-                    return;
-                } else if (ret == -2) {
-                    RESULT_CODE = -1;
-                    Log.e(tag, "Lib_PrnCheckStatus fail, ret = " + ret);
-                    SendMsg("Error, Printer Too Hot ");
-                    m_bThreadFinished = true;
-                    return;
-                } else if (ret == -3) {
-                    RESULT_CODE = -1;
-                    Log.e(tag, "voltage = " + (BatteryV * 2));
-                    SendMsg("Battery less :" + (BatteryV * 2));
-                    m_bThreadFinished = true;
-                    return;
-                }
-                else */
+
                 {
                     RESULT_CODE = 0;
                 }
@@ -471,16 +449,14 @@ public class PrintActivity extends Activity {
                         msg.what = DISABLE_RG;
                         handler.sendMessage(msg);
 
-                        String stringg = " a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?";
-                        //	Print.Lib_PrnStr(string + "\n");
+                        String stringg = "Hello Benjamin Sinzore?";
+
                         posApiHelper.PrintSetFont((byte) 24, (byte) 24, (byte) 0x00);
 
-//						for(int i=0;i<50;i++)
-//						{
-//							Print.Lib_PrnStr(Integer.toString(i)+ " "+stringg + "\n");
-//						}
-                        posApiHelper.PrintStr("a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >? a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >? a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?\n");
-//						ret = Print.Lib_PrnStr(" a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?a b c d e f g h i j k l m n o p q r s t u v w x z A B C D E F G H I J K L M N O P Q R S T U V W X Z 1 2 3 4 5 6 7 8 9 ! @ # $ % ^ & * () _ + ~   [ ] , . / ; ' { } : : | < >?");
+
+                        posApiHelper.PrintStr(stringg);
+
+
                         posApiHelper.PrintBarcode(content, 360, 120, BarcodeFormat.CODE_128);
                         posApiHelper.PrintStr("CODE_128 : " + content + "\n\n");
                         posApiHelper.PrintBarcode(content, 240, 240, BarcodeFormat.QR_CODE);
@@ -499,7 +475,7 @@ public class PrintActivity extends Activity {
 
                         SendMsg("Printing... ");
                         final long starttime_long = System.currentTimeMillis();
-                   //     Log.e("printtime", "PRINT_UNICODE endttime = " + starttime_long);
+
                         ret = posApiHelper.PrintStart();
 
                         Log.e(tag, "PrintStart ret = " + ret);
@@ -524,7 +500,7 @@ public class PrintActivity extends Activity {
                             SendMsg("Print Finish ");
                         }
                         final long endttime_long = System.currentTimeMillis();
-                      //  Log.e("printtime", "PRINT_UNICODE endttime = " + endttime_long);
+
                         final long totaltime_long = starttime_long - endttime_long;
                         SendMsg("Print Long Totaltimie " + totaltime_long +"Ms");
                         break;
@@ -554,25 +530,6 @@ public class PrintActivity extends Activity {
                         posApiHelper.PrintStr("                                         \n");
                         posApiHelper.PrintStr("                                         \n");
 
-//                        posApiHelper.PrintSetFont((byte) 20, (byte) 20, (byte) 0x00);
-//
-//                        posApiHelper.PrintStr("ABCDEFGHIJKLMNHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNHIJKLMNOPQRSTUVWXYZ\n");
-//                        posApiHelper.PrintStr("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n");
-//                        posApiHelper.PrintStr("12345678901234567890123456789012345678901234567890+_)(*&^%$#@!~\n");
-
-//                        posApiHelper.PrintSetFont((byte) 12, (byte) 12, (byte) 0x00);
-//                        posApiHelper.PrintStr("Подпись клиента не требуется\n");
-//                        posApiHelper.PrintStr("ABCDEFGHIJKLMNHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNHIJKLMNOPQRSTUVWXYZ\n");
-//                        posApiHelper.PrintStr("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n");
-//                        posApiHelper.PrintStr("12345678901234567890123456789012345678901234567890+_)(*&^%$#@!~\n");
-//                        posApiHelper.PrintStr("                                         \n");
-//                        posApiHelper.PrintStr("                                         \n");
-
-
-//                        posApiHelper.PrintSetFont((byte) 28, (byte) 28, (byte) 0x00);
-//                        posApiHelper.PrintStr("ABCDEFGHIJKLMNHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNHIJKLMNOPQRSTUVWXYZ\n");
-//                        posApiHelper.PrintStr("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz\n");
-//                        posApiHelper.PrintStr("12345678901234567890123456789012345678901234567890+_)(*&^%$#@!~\n");
 
                         SendMsg("Printing... ");
                         Log.d("Robert2", "Lib_PrnStart ret START1 " );
@@ -749,6 +706,7 @@ public class PrintActivity extends Activity {
                         break;
 
                     case PRINT_OPEN:
+
                         SendMsg("PRINT_OPEN");
                         msg.what = DISABLE_RG;
                         handler.sendMessage(msg);
@@ -876,7 +834,7 @@ public class PrintActivity extends Activity {
 
                      //   Bitmap bmp = BitmapFactory.decodeResource(PrintActivity.this.getResources(), R.mipmap.metrolinx1bitdepth);
                         final long start_BmpD = System.currentTimeMillis();
-                        Bitmap bmp1 = BitmapFactory.decodeResource(PrintActivity.this.getResources(), R.mipmap.test001);
+                        Bitmap bmp1 = BitmapFactory.decodeResource(PrintActivity.this.getResources(), R.mipmap.mybit);
                         final long end_BmpD = System.currentTimeMillis();
                         final long decodetime = end_BmpD - start_BmpD;
                         final long start_PrintBmp = System.currentTimeMillis();

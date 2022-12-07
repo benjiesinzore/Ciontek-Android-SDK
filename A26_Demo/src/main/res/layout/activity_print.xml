@@ -176,7 +176,7 @@
             android:background="@drawable/shape_button"
             android:onClick="onClickPrnOpen"
             android:textColor="@color/white"
-            android:text="Print Open" />
+            android:text="Benjamin Test" />
 
         <Button
             android:id="@+id/btnLong"
