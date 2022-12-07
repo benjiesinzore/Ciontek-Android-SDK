@@ -29,7 +29,14 @@
         android:supportsRtl="true"
         android:name="test.apidemo.MyCrashApplication"
         >
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
         <activity
@@ -53,14 +60,7 @@
         </activity>
 
         <activity
-            android:name=".PrintActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".PrintActivity"/>
         <activity
             android:name=".SysActivity"
             android:label="@string/title_activity_others" >

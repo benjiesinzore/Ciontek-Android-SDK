@@ -834,7 +834,8 @@ public class PrintActivity extends Activity {
 
                      //   Bitmap bmp = BitmapFactory.decodeResource(PrintActivity.this.getResources(), R.mipmap.metrolinx1bitdepth);
                         final long start_BmpD = System.currentTimeMillis();
-                        Bitmap bmp1 = BitmapFactory.decodeResource(PrintActivity.this.getResources(), R.mipmap.mybit);
+                        Bitmap bmp1 = BitmapFactory.decodeResource(PrintActivity.this
+                                .getResources(), R.mipmap.kyaps___log100);
                         final long end_BmpD = System.currentTimeMillis();
                         final long decodetime = end_BmpD - start_BmpD;
                         final long start_PrintBmp = System.currentTimeMillis();

@@ -225,8 +225,8 @@ public class MainActivity extends Activity {
                         break;
                     case ITEM_CODE_PRINT:
                         Toast.makeText(MainActivity.this, "hello benjamin", Toast.LENGTH_SHORT).show();
-//                        Intent printIntent = new Intent(MainActivity.this, PrintActivity.class);
-//                        startActivity(printIntent);
+                        Intent printIntent = new Intent(MainActivity.this, PrintActivity.class);
+                        startActivity(printIntent);
                         break;
                     case ITEM_CODE_SYS:
                         Intent sysIntent = new Intent(MainActivity.this, SysActivity.class);
